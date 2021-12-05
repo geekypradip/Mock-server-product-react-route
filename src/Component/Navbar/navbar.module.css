@@ -1,0 +1,18 @@
+.navbar {
+  background: #000;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+}
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.navLink:hover {
+  font-weight: bold;
+  padding: 4px;
+  background: #fff;
+  color: #000;
+}
