@@ -1,5 +1,9 @@
+import { useContext } from 'react';
+import { AuthContext } from '../../Context/AuthContextProvider';
 import styles from './style/style.module.css'
 function Home() {
+    const [isLogin]=useContext(AuthContext);
+    console.log(isLogin)
     return ( 
      
 <div className={styles.home}>
