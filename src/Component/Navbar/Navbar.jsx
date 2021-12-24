@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContextProvider";
+import { ThemeContext } from "../../Context/ThemeContextProvider";
 import styles from './navbar.module.css'
 function Navbar() {
     const [isLogin,setLogin]=useContext(AuthContext);
+    const [dark,setDark]=useContext(ThemeContext);
+    console.log(dark)
     // console.log(isLogin);
     // if(isLogin){
         let forLogout=()=>{
@@ -17,6 +20,7 @@ return (
         <Link to="/" className={styles.navLink} onClick={()=>forLogout()}>
           {isLogin?"Log Out":"Login"} 
      </Link>
+     <span onClick={()=>setDark((e)=>!e)}>{dark?"Light Theme":"Dark Theme"}</span>
     </div>
      )
     // }
